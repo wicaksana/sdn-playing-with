@@ -1,11 +1,12 @@
 from mininet.topo import Topo
 
+
 class MyTopo(Topo):
     """
     Simple topology example
     """
     def __init__(self):
-        "create custom topo"
+        """create custom topo"""
         # initialize topology
         Topo.__init__(self)
 
@@ -19,5 +20,5 @@ class MyTopo(Topo):
         self.addLink(right_host, left_switch)
 
 topos = {
-    'mytopo': (lambda : MyTopo() )
+    'mytopo': (lambda : MyTopo())
 }
